@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>QuteBits - QR Code Generator</title>
+    <style>#inputs, #generate_qr { display: block; }</style>
+  </head>
+  <body>
+    <div>   
+      <textarea id="inputs" rows="20" cols="80">
+Do not let your fire go out, spark by irreplaceable
+spark in the hopeless swamps of the not-quite,
+the not-yet, and the not-at-all.
+Do not let the hero in your soul 
+perish in lonely frustration
+for the life you deserved 
+and have never been able 
+to reach. The world you 
+desire can be won. 
+It exists...
+it is real...
+it is possible...
+it's yours.</textarea>
+      <button id="generate_qr">GENERATE - 9x9 on A4 with 10mm margins</button>
+
+      <!-- dependencies -->
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript" src="lib/qrcode.js"></script>
+      <script type="text/javascript" src="lib/jspdf.js"></script>
+      <script type="text/javascript" src="lib/FileSaver.min.js"></script>
+
+      <!-- the script itself -->
+      <script type="text/javascript" src="js/qr_generator.js"></script>
+      <script>
+        $('#generate_qr').click(function(){
+          //create array of strings you want to encode - and run
+          var codes = $('#inputs').val().split('\n');
+          qr_generate(codes);
+        });
+      </script>
+    </div>
+  </body>
+</html>
