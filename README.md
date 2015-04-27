@@ -2,6 +2,8 @@
 
 [Javascript only] Encodes an array of strings into QR codes and generates a PDF out of it. Runs purely from the browser.
 
+Live Demo: [http://jsfiddle.net/rmwtcc8e/](http://jsfiddle.net/rmwtcc8e/)
+
 ## How to use:
 
 After you add jQuery and other 3 dependencies (watch example.html) just run
